@@ -1,14 +1,16 @@
-#encoding:utf-8
+# encoding:utf-8
 
 # from dao.Dmp import Dmp
 from dao.MySQL import MySQL
+
+
 # from dao.Oracle import Oracle
 
 class Factory:
     def __init__(self):
         pass
 
-    def getDbServer(self,db):
+    def getDbServer(self, db):
         dbtype = db.split(",")[0]
         if dbtype.lower() == "mysql":
             dbServer = MySQL(db)
